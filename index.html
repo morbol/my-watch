@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タブ付き・ウォッチリスト</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #ffffff;
+        }
+        .tradingview-widget-container {
+            height: 100vh;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+        {
+          "colorTheme": "light",
+          "dateRange": "12M",
+          "showChart": false,
+          "locale": "ja",
+          "width": "100%",
+          "height": "100%",
+          "largeChartUrl": "",
+          "isTransparent": false,
+          "showSymbolLogo": true,
+          "showFloatingTooltip": false,
+          "tabs": [
+            {
+              "title": "メイン",
+              "symbols": [
+                { "s": "SPREADEX:NIKKEI", "d": "日経平均" },
+                { "s": "OANDA:US30USD",  "d": "ダウ工業株" },
+                { "s": "OANDA:NAS100USD", "d": "ナスダック100" },
+                { "s": "OANDA:SPX500USD", "d": "S&P 500" },
+                { "s": "Pepperstone:VIX", "d": "VIX恐怖指数" },
+                { "s": "CAPITALCOM:US20Y", "d": "米20年債利回り" },
+                { "s": "FX:USDJPY", "d": "ドル円" },
+                { "s": "OANDA:EU50EUR", "d": "欧州 Stoxx50" },
+                { "s": "OANDA:DE30EUR", "d": "ドイツ DAX" },
+                { "s": "OANDA:UK100GBP", "d": "イギリス FTSE" },
+                { "s": "OANDA:XAUUSD", "d": "ゴールド" },
+                { "s": "BITSTAMP:BTCUSD", "d": "BTC/USD" },
+                { "s": "NASDAQ:NVDA", "d": "エヌビディア" }
+
+              ]
+            },
+            {
+              "title": "インデックス",
+              "symbols": [
+                { "s": "SPREADEX:NIKKEI", "d": "日経平均" },
+                { "s": "OANDA:US30USD",  "d": "ダウ工業株" },
+                { "s": "OANDA:NAS100USD", "d": "ナスダック100" },
+                { "s": "OANDA:SPX500USD", "d": "S&P 500" },
+                { "s": "BITSTAMP:BTCUSD", "d": "BTC/USD" },
+                { "s": "NASDAQ:NVDA", "d": "エヌビディア" }
+              ]
+            },
+            {
+
+              "title": "為替・金",
+              "symbols": [
+                { "s": "FX:USDJPY", "d": "ドル円" },
+                { "s": "OANDA:XAUUSD", "d": "ゴールド" },
+                { "s": "FX:EURUSD", "d": "ユーロドル" }
+              ]
+            }
+          ]
+        }
+        </script>
+    </div>
+    </body>
+</html>
